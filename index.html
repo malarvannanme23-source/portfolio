@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanical Engineering Student | Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="public">
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="#home" data-key="nav.logo">ME Profile</a>
+      <nav class="nav">
+        <a href="#home" data-key="nav.home">Home</a>
+        <a href="#about" data-key="nav.about">About</a>
+        <a href="#skills" data-key="nav.skills">Skills</a>
+        <a href="#projects" data-key="nav.projects">Projects</a>
+        <a href="#resume" data-key="nav.resume">Resume</a>
+        <a href="#contact" data-key="nav.contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="section hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1 data-key="home.name">V. Malarvannan</h1>
+        <p class="tagline" data-key="home.tagline">Mechanical / Mechatronics Engineering Student focused on robotics and automation.</p>
+        <p class="hero-intro" data-key="home.intro">I build practical mechanical solutions and enjoy working on CAD, sensors, and automation prototypes.</p>
+        <a class="btn" href="#contact" data-key="home.cta">Contact Me</a>
+      </div>
+      <div class="hero-card">
+        <h2 data-key="home.highlights.title">Quick Highlights</h2>
+        <ul data-key="home.highlights.list">
+          <li>Passionate about mechanical design and smart systems</li>
+          <li>Hands-on with CAD and fabrication</li>
+          <li>Learning programming for real-world engineering</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p class="about-text" data-section="about" data-field="text"></p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section alt">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="list-stack" data-list="education"></div>
+    </div>
+  </section>
+
+  <!-- Career Interests Section -->
+  <section id="career" class="section">
+    <div class="container">
+      <h2>Career Interests</h2>
+      <div class="list-stack" data-list="career"></div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid" data-list="skills"></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 data-key="projects.title">Projects</h2>
+      <!-- Projects are rendered here by script.js (public read-only) -->
+      <div class="projects-container" data-list="projects"></div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="section alt">
+    <div class="container">
+      <h2 data-key="resume.title">Resume</h2>
+      <p data-key="resume.text">Download my resume to learn more about my education, skills, and project experience.</p>
+      <!-- Replace resume PDF: update the file at resume/Malarvannan_Resume.pdf -->
+      <a class="btn resume-btn" href="resume/Malarvannan_Resume.pdf" target="_blank" rel="noopener" data-key="resume.cta" data-resume>
+        Download Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-grid" data-section="contact">
+        <div class="contact-item">
+          <h3>Email</h3>
+          <p data-field="email"></p>
+        </div>
+        <div class="contact-item">
+          <h3>Phone</h3>
+          <p data-field="phone"></p>
+        </div>
+        <div class="contact-item">
+          <h3>GitHub</h3>
+          <p data-field="github"></p>
+        </div>
+        <div class="contact-item">
+          <h3>LinkedIn</h3>
+          <p data-field="linkedin"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-key="footer.text">© 2026 V. Malarvannan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

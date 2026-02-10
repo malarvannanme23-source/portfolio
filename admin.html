@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanical Engineering Student | Profile</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Admin-only editable highlight (applies via JS when contenteditable is active) */
+    .admin-editable {
+      color: #ffffff;
+      outline: 2px dashed #2a66b5;
+      outline-offset: 4px;
+      background: rgba(11, 31, 58, 0.25);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="edit-mode" data-page="admin">
+  <!-- Editable text: elements marked with data-editable="true" are safe to edit -->
+  <!-- Data sync: elements marked with data-key="..." are saved and loaded automatically -->
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="#home" data-key="nav.logo" data-editable="true" contenteditable="true">ME Profile</a>
+      <nav class="nav">
+        <a href="#home" data-key="nav.home" data-editable="true" contenteditable="true">Home</a>
+        <a href="#about" data-key="nav.about" data-editable="true" contenteditable="true">About</a>
+        <a href="#skills" data-key="nav.skills" data-editable="true" contenteditable="true">Skills</a>
+        <a href="#projects" data-key="nav.projects" data-editable="true" contenteditable="true">Projects</a>
+        <a href="#resume" data-key="nav.resume" data-editable="true" contenteditable="true">Resume</a>
+        <a href="#contact" data-key="nav.contact" data-editable="true" contenteditable="true">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="section hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-badge" data-key="home.greeting" data-editable="true" contenteditable="true" data-animate="1">Hey, I'm</span>
+        <h1 class="hero-name" data-key="home.name" data-editable="true" contenteditable="true" data-animate="2">V. Malarvannan</h1>
+        <p class="hero-role" data-key="home.role" data-editable="true" contenteditable="true" data-animate="3">Mechanical / Mechatronics Engineering Student</p>
+        <p class="hero-intro" data-key="home.intro" data-editable="true" contenteditable="true" data-animate="4">
+          I build practical mechanical systems and enjoy turning ideas into working prototypes.
+          My focus is design, automation, and reliable real-world engineering.
+        </p>
+        <div class="hero-actions" data-animate="5">
+          <a class="btn btn-primary" href="resume/Malarvannan_Resume.pdf" target="_blank" rel="noopener"
+             data-resume data-key="home.resumeCta" data-editable="true" contenteditable="true">Download Resume</a>
+          <a class="btn btn-outline" href="#contact" data-key="home.cta" data-editable="true" contenteditable="true">Contact Me</a>
+        </div>
+        <div class="hero-highlights" data-animate="7">
+          <h2 data-key="home.highlights.title" data-editable="true" contenteditable="true">Quick Highlights</h2>
+          <ul data-key="home.highlights.list">
+            <li data-editable="true" contenteditable="true">Passionate about mechanical design and smart systems</li>
+            <li data-editable="true" contenteditable="true">Hands-on with CAD and fabrication</li>
+            <li data-editable="true" contenteditable="true">Learning programming for real-world engineering</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Profile photo removed: hero text now fills the full width -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <!-- Editable About text (admin only) -->
+      <p class="about-text" data-section="about" data-field="text" data-editable="true" contenteditable="true"></p>
+    </div>
+  </section>
+
+  <!-- Education Section (Admin add/edit/delete) -->
+  <section id="education" class="section alt">
+    <div class="container">
+      <h2>Education</h2>
+
+      <div class="admin-panel-block">
+        <h3 class="panel-title">Add Education</h3>
+        <!-- Admin only: use this form to add a new education item -->
+        <form id="education-form" class="admin-form">
+          <label>
+            Degree
+            <input id="education-degree" type="text" placeholder="e.g., B.E. Mechanical Engineering" required />
+          </label>
+          <label>
+            College
+            <input id="education-college" type="text" placeholder="College or University" required />
+          </label>
+          <label>
+            Year
+            <input id="education-year" type="text" placeholder="e.g., 2022 - 2026" required />
+          </label>
+          <button type="submit" class="btn">Add Education</button>
+        </form>
+      </div>
+
+      <!-- Education list (rendered by script.js) -->
+      <div class="list-stack" data-list="education"></div>
+    </div>
+  </section>
+
+  <!-- Career Interests Section (Admin add/edit/delete) -->
+  <section id="career" class="section">
+    <div class="container">
+      <h2>Career Interests</h2>
+
+      <div class="admin-panel-block">
+        <h3 class="panel-title">Add Career Interest</h3>
+        <!-- Admin only: use this form to add a new career interest -->
+        <form id="career-form" class="admin-form">
+          <label>
+            Interest
+            <input id="career-text" type="text" placeholder="e.g., Robotics and Automation" required />
+          </label>
+          <button type="submit" class="btn">Add Interest</button>
+        </form>
+      </div>
+
+      <!-- Career list (rendered by script.js) -->
+      <div class="list-stack" data-list="career"></div>
+    </div>
+  </section>
+
+  <!-- Skills Section (Admin add/edit/delete) -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <h2>Skills</h2>
+
+      <div class="admin-panel-block">
+        <h3 class="panel-title">Add Skill</h3>
+        <!-- Admin only: use this form to add a new skill card -->
+        <form id="skill-form" class="admin-form">
+          <label>
+            Skill Title
+            <input id="skill-title" type="text" placeholder="e.g., Mechanical Design" required />
+          </label>
+          <label>
+            Skill Description
+            <textarea id="skill-description" rows="3" placeholder="Short description..." required></textarea>
+          </label>
+          <button type="submit" class="btn">Add Skill</button>
+        </form>
+      </div>
+
+      <!-- Skills list (rendered by script.js) -->
+      <div class="skills-grid" data-list="skills"></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 data-key="projects.title" data-editable="true" contenteditable="true">Projects</h2>
+      <!-- Admin only: add a new project using this form -->
+      <div class="project-admin-panel">
+        <h3 class="project-admin-title">Add New Project</h3>
+        <!-- Admin only: use this form to add a new project card -->
+        <form id="project-form" class="project-form">
+          <label>
+            Project Name
+            <input id="project-name" type="text" placeholder="e.g., Automated Conveyor Sorting" required />
+          </label>
+          <label>
+            Description
+            <textarea id="project-description" rows="3" placeholder="Short project summary..." required></textarea>
+          </label>
+          <label>
+            Technologies Used
+            <input id="project-tech" type="text" placeholder="e.g., Arduino, IR sensors" required />
+          </label>
+          <label>
+            Status
+            <select id="project-status">
+              <option>Upcoming</option>
+              <option selected>Ongoing</option>
+              <option>Completed</option>
+            </select>
+          </label>
+          <label>
+            Extra (Optional: My Role or Year)
+            <input id="project-extra" type="text" placeholder="e.g., My role: CAD design" />
+          </label>
+          <button type="submit" class="btn">Add Project</button>
+        </form>
+      </div>
+
+      <!-- Projects are rendered here by script.js (admin view includes edit/delete buttons) -->
+      <div class="projects-container" data-list="projects"></div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="section alt">
+    <div class="container">
+      <h2 data-key="resume.title" data-editable="true" contenteditable="true">Resume</h2>
+      <p data-key="resume.text" data-editable="true" contenteditable="true">Download my resume to learn more about my education, skills, and project experience.</p>
+      <!-- Replace resume PDF: update the file at resume/Malarvannan_Resume.pdf -->
+      <a class="btn resume-btn" href="resume/Malarvannan_Resume.pdf" target="_blank" rel="noopener" data-key="resume.cta" data-resume data-editable="true" contenteditable="true">
+        Download Resume
+      </a>
+      <p class="resume-meta" data-resume-meta></p>
+
+      <!-- Admin only: upload a new resume PDF (stored in this browser only) -->
+      <div class="resume-upload">
+        <label class="resume-upload-label" for="resume-upload">Upload Resume (PDF)</label>
+        <input id="resume-upload" class="resume-upload-input" type="file" accept="application/pdf" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section (Admin editable) -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2>Contact</h2>
+
+      <!-- Contact display (rendered by script.js) -->
+      <div class="contact-grid" data-section="contact">
+        <div class="contact-item">
+          <h3>Email</h3>
+          <p data-field="email"></p>
+        </div>
+        <div class="contact-item">
+          <h3>Phone</h3>
+          <p data-field="phone"></p>
+        </div>
+        <div class="contact-item">
+          <h3>GitHub</h3>
+          <p data-field="github"></p>
+        </div>
+        <div class="contact-item">
+          <h3>LinkedIn</h3>
+          <p data-field="linkedin"></p>
+        </div>
+      </div>
+
+      <div class="admin-panel-block">
+        <h3 class="panel-title">Edit Contact Info</h3>
+        <!-- Admin only: update contact info and click Save -->
+        <form id="contact-form" class="admin-form">
+          <label>
+            Email
+            <input id="contact-email" type="email" placeholder="name@example.com" required />
+          </label>
+          <label>
+            Phone
+            <input id="contact-phone" type="text" placeholder="+1 555 123 4567" required />
+          </label>
+          <label>
+            GitHub
+            <input id="contact-github" type="text" placeholder="github.com/username" required />
+          </label>
+          <label>
+            LinkedIn
+            <input id="contact-linkedin" type="text" placeholder="linkedin.com/in/username" required />
+          </label>
+          <button type="submit" class="btn">Save Contact</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-key="footer.text" data-editable="true" contenteditable="true">© 2026 V. Malarvannan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
