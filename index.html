@@ -1,135 +1,199 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mechanical Engineering Student | Profile</title>
+  <title>Malarvannan | Mechanical Engineering Portfolio</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body data-page="public">
-  <!-- Header / Navigation -->
+
+  <!-- ================= HEADER ================= -->
   <header class="site-header">
     <div class="container header-content">
-      <a class="logo" href="#home" data-key="nav.logo">ME Profile</a>
+      <a class="logo" href="#home">ME Profile</a>
+
       <nav class="nav">
-        <a href="#home" data-key="nav.home">Home</a>
-        <a href="#about" data-key="nav.about">About</a>
-        <a href="#skills" data-key="nav.skills">Skills</a>
-        <a href="#projects" data-key="nav.projects">Projects</a>
-        <a href="#resume" data-key="nav.resume">Resume</a>
-        <a href="#contact" data-key="nav.contact">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
     </div>
   </header>
 
-  <!-- Home Section -->
+  <!-- ================= HOME ================= -->
   <section id="home" class="section hero">
     <div class="container hero-content">
       <div class="hero-text">
-        <h1 data-key="home.name">V. Malarvannan</h1>
-        <p class="tagline" data-key="home.tagline">Mechanical / Mechatronics Engineering Student focused on robotics and automation.</p>
-        <p class="hero-intro" data-key="home.intro">I build practical mechanical solutions and enjoy working on CAD, sensors, and automation prototypes.</p>
-        <a class="btn" href="#contact" data-key="home.cta">Contact Me</a>
+        <h1>V. Malarvannan</h1>
+        <p class="tagline">
+          Mechanical / Mechatronics Engineering Student
+        </p>
+        <p class="hero-intro">
+          Interested in mechanical design, automation, robotics, and practical engineering solutions.
+        </p>
+        <a class="btn" href="#contact">Contact Me</a>
       </div>
+
       <div class="hero-card">
-        <h2 data-key="home.highlights.title">Quick Highlights</h2>
-        <ul data-key="home.highlights.list">
-          <li>Passionate about mechanical design and smart systems</li>
-          <li>Hands-on with CAD and fabrication</li>
-          <li>Learning programming for real-world engineering</li>
+        <h2>Quick Highlights</h2>
+        <ul>
+          <li>Mechanical Design & CAD</li>
+          <li>Manufacturing & Fabrication</li>
+          <li>Automation & Robotics Basics</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- ================= ABOUT ================= -->
   <section id="about" class="section">
     <div class="container">
       <h2>About Me</h2>
-      <p class="about-text" data-section="about" data-field="text"></p>
+      <p>
+        I am a Mechanical Engineering student with interest in design,
+        manufacturing, automation, and robotics. I enjoy working on
+        real-world projects involving CAD, fabrication, and system integration.
+      </p>
     </div>
   </section>
 
-  <!-- Education Section -->
+  <!-- ================= EDUCATION ================= -->
   <section id="education" class="section alt">
     <div class="container">
       <h2>Education</h2>
-      <div class="list-stack" data-list="education"></div>
+      <ul class="list-stack">
+        <li>
+          <strong>B.E. Mechanical Engineering</strong><br />
+          Bannari Amman Institute of Technology (2023 – 2027)
+        </li>
+        <li>
+          <strong>Higher Secondary (HSC)</strong><br />
+          MAM Exel Matric Higher Secondary School
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- Career Interests Section -->
+  <!-- ================= CAREER INTERESTS ================= -->
   <section id="career" class="section">
     <div class="container">
       <h2>Career Interests</h2>
-      <div class="list-stack" data-list="career"></div>
+      <ul class="list-stack">
+        <li>Mechanical Design</li>
+        <li>Manufacturing Engineering</li>
+        <li>Robotics and Automation</li>
+        <li>Electric Vehicles (EV)</li>
+        <li>Product Development</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- ================= SKILLS ================= -->
   <section id="skills" class="section alt">
     <div class="container">
       <h2>Skills</h2>
-      <div class="skills-grid" data-list="skills"></div>
+      <div class="skills-grid">
+        <div class="skill">Mechanical Design</div>
+        <div class="skill">3D CAD (SolidWorks)</div>
+        <div class="skill">Manufacturing Processes</div>
+        <div class="skill">Engineering Drawing</div>
+        <div class="skill">Automation Basics</div>
+        <div class="skill">C Programming (Basics)</div>
+      </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- ================= PROJECTS ================= -->
   <section id="projects" class="section">
     <div class="container">
-      <h2 data-key="projects.title">Projects</h2>
-      <!-- Projects are rendered here by script.js (public read-only) -->
-      <div class="projects-container" data-list="projects"></div>
+      <h2>Projects</h2>
+
+      <div class="project-card">
+        <h3>High-Performance Bicycle Design</h3>
+        <p>
+          Designed and analyzed a bicycle frame focusing on strength,
+          weight reduction, and manufacturability.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Autonomous Excavation Rover</h3>
+        <p>
+          Designed mechanical structure and assisted in integration
+          for excavation and dumping operations.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- Resume Section -->
+  <!-- ================= RESUME ================= -->
   <section id="resume" class="section alt">
     <div class="container">
-      <h2 data-key="resume.title">Resume</h2>
-      <p data-key="resume.text">Download my resume to learn more about my education, skills, and project experience.</p>
-      <!-- Replace resume PDF: update the file at resume/Malarvannan_Resume.pdf -->
-      <a class="btn resume-btn" href="resume/Malarvannan_Resume.pdf" target="_blank" rel="noopener" data-key="resume.cta" data-resume>
+      <h2>Resume</h2>
+      <p>
+        Download my resume to learn more about my education,
+        skills, and project experience.
+      </p>
+
+      <!-- IMPORTANT: Resume file path -->
+      <a
+        class="btn resume-btn"
+        href="resume/Malarvannan_Resume.pdf"
+        target="_blank"
+        download
+      >
         Download Resume
       </a>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section alt">
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section">
     <div class="container">
       <h2>Contact</h2>
-      <div class="contact-grid" data-section="contact">
-        <div class="contact-item">
+
+      <div class="contact-grid">
+        <div>
           <h3>Email</h3>
-          <p data-field="email"></p>
+          <p>malarvannan.me23@bitsathy.ac.in</p>
         </div>
-        <div class="contact-item">
+
+        <div>
           <h3>Phone</h3>
-          <p data-field="phone"></p>
+          <p>+91-XXXXXXXXXX</p>
         </div>
-        <div class="contact-item">
+
+        <div>
           <h3>GitHub</h3>
-          <p data-field="github"></p>
+          <p>github.com/malarvannanme23-source</p>
         </div>
-        <div class="contact-item">
+
+        <div>
           <h3>LinkedIn</h3>
-          <p data-field="linkedin"></p>
+          <p>linkedin.com/in/malarvannan</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="container">
-      <p data-key="footer.text">© 2026 V. Malarvannan. All rights reserved.</p>
+      <p>© 2026 V. Malarvannan. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
+
 </body>
 </html>
-
